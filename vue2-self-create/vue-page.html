@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+      function changeNum() {
+        debugger;
+        window.vue.num = 3;
+      }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <input v-model="num" />
+        <div>
+            <input v-model="name" />
+        </div>
+        <button type="button" onclick="changeNum()">修改vue.num值为3更新到视图</button>
+    </div>
+</body>
+
+<script type="application/javascript" src="vue-core.js"></script>
+<script type="application/javascript">
+  window.vue = new Vue({
+    el: '#app',
+    data() {
+      return {
+        num: 1,
+        name: 'jackson'
+      }
+    }
+  })
+</script>
+</html>
